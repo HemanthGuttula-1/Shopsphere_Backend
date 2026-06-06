@@ -1,11 +1,51 @@
+###creating user
 POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-  "name":"Hemanth",
-  "email":"hemanth@gmail.com",
-  "password":"123456"
+  "name":"Bhaskar",
+  "email":"bhaskar@gmail.com",
+  "password":"987654"
+}
+###login
+POST http://localhost:5000/api/auth/login
+Content-type: application/json 
+
+{
+  "email":"bhaskar@gmail.com",
+  "password":"987654"
 }
 
-###
-GET http://localhost:5000/
+###get the item 
+GET http://localhost:5000/api/products/6a24193f953e24ca7ea2da9d
+
+###creating new product
+POST http://localhost:5000/api/products
+Content-Type: application/json
+
+{
+  "name": "iPhone 16",
+  "description": "Apple flagship phone",
+  "category": "Mobiles",
+  "price": 89999,
+  "stock": 10,
+  "image": "iphone16.jpg"
+}
+
+###update the product
+PUT http://localhost:5000/api/products/6a24193f953e24ca7ea2da9d
+Content-Type: application/json
+
+{
+  "price": 84999
+}
+
+###add to cart 
+POST http://localhost:5000/api/cart/add
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "productId":"PRODUCT_ID",
+  "quantity":2
+}
