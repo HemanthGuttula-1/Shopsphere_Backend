@@ -49,3 +49,12 @@ Content-Type: application/json
   "productId":"PRODUCT_ID",
   "quantity":2
 }
+
+###test payment
+POST http://localhost:5000/api/payment/create-order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjQxZWQ2MjUxZDIyMTFmMGM1MDFiMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwODAxNTM2LCJleHAiOjE3ODA4MDIxMzZ9.eWZ8jBFUx1q-GUYAJE6Jk5YxpbGG7OKpCKrW2zFySOo
+Content-Type: application/json
+
+{
+  "amount": 1000
+}
