@@ -1,1 +1,4 @@
 .env 
+seedProducts.js
+productCount.js
+products.json

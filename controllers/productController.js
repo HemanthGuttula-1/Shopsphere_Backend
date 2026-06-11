@@ -93,10 +93,45 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+const updateCartQuantity = async (req, res) => {
+    try {
+      const { productId, quantity } = req.body;
+
+      const cart = await Cart.findOne({
+        user: req.user.id,
+      });
+
+      if (!cart) {
+        return res.status(404).json({
+          message: "Cart not found",
+        });
+      }
+
+      const item = cart.products.find(
+        (item) =>
+          item.product.toString() === productId
+      );
+
+      if (item) {
+        item.quantity = quantity;
+      }
+
+      await cart.save();
+
+      res.status(200).json(cart);
+
+    } catch (error) {
+      res.status(500).json({
+        message: error.message,
+      });
+    }
+};
+
 module.exports = {
   getProducts,
   getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
+  updateCartQuantity,
 };
