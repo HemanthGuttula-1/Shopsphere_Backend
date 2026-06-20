@@ -29,10 +29,7 @@ app.use("/api/orders", require("./routes/orderRoutes"));
 
 app.use("/api/payment", require("./routes/paymentRoutes"));
 
-app.use(
-  "/api/dashboard",
-  require("./routes/dashboardRoutes")
-);
+app.use("/api/dashboard", require("./routes/dashboardRoutes"));
 
 
 const PORT = process.env.PORT || 5000;

@@ -3,9 +3,10 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-  "name":"Bhaskar",
-  "email":"bhaskar@gmail.com",
-  "password":"987654"
+  "name":"hemanth",
+  "email":"guttula@gmail.com",
+  "password":"123456",
+  "role":"admin"
 }
 ###login
 POST http://localhost:5000/api/auth/login
