@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 // Register
 const registerUser = async (req, res) => {  
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, role } = req.body;
 
     const userExists = await User.findOne({ email });
 
@@ -23,6 +23,7 @@ const registerUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      role
     });
 
     res.status(201).json({
@@ -42,7 +43,7 @@ const loginUser = async (req, res) => {
     const { email, password } = req.body;
 
     const user = await User.findOne({ email });
-
+    console.log(`user:${user}`)
     if (!user) {
       return res.status(401).json({
         message: "Invalid credentials",
