@@ -2,9 +2,6 @@ const express = require("express");
 
 const router = express.Router();
 
-const protect = require("../middleware/authMiddleware");
-const adminOnly = require("../middleware/adminMiddleware");
-
 const {
   createOrder,
   getMyOrders,
@@ -12,21 +9,19 @@ const {
   updateOrderStatus,
 } = require("../controllers/orderController");
 
+const protect = require("../middleware/authMiddleware");
+const admin = require("../middleware/adminMiddleware");
+
 router.post("/", protect, createOrder);
 
 router.get("/my-orders", protect, getMyOrders);
 
-router.get(
-  "/all",
-  protect,
-  adminOnly,
-  getAllOrders
-);
+router.get("/all", protect, admin, getAllOrders);
 
 router.put(
-  "/:id",
+  "/:id/status",
   protect,
-  adminOnly,
+  admin,
   updateOrderStatus
 );
 

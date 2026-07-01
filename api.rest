@@ -13,8 +13,9 @@ POST http://localhost:5000/api/auth/login
 Content-type: application/json 
 
 {
-  "email":"bhaskar@gmail.com",
-  "password":"987654"
+  "email":"h03an20h@gmail.com",
+  "password":"123456",
+  "role":"admin"
 }
 
 ###get the item 
@@ -34,7 +35,7 @@ Content-Type: application/json
 }
 
 ###update the product
-PUT http://localhost:5000/api/products/6a24193f953e24ca7ea2da9d
+PUT http://localhost:5000/api/products/6a41c7af1af9d6edfac4aa01
 Content-Type: application/json
 
 {
@@ -58,4 +59,49 @@ Content-Type: application/json
 
 {
   "amount": 1000
+}
+
+###order
+POST http://localhost:5000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMzk1MjNkYTgyMzNjN2VkMDMwYjA4YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjg3MTE0MSwiZXhwIjoxNzgyODcxNzQxfQ.uSuUTLO0uKNYOIpcXVoxpN3AXA8xxW085P12SqPCiIY
+Content-Type: application/json
+
+{
+  "products": [
+    {
+      "product": "6872c9b5d3f8f8a8d1234567",
+      "quantity": 2
+    },
+    {
+      "product": "6872ca01d3f8f8a8d1234568",
+      "quantity": 1
+    }
+  ],
+  "totalAmount": 154999,
+  "paymentMethod": "Razorpay",
+  "paymentStatus": "Paid",
+  "shippingAddress": "Door No. 10-15, Main Road, Kakinada, Andhra Pradesh, India"
+}
+
+###my-orders
+GET http://localhost:5000/api/orders/my-orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMzk1MjNkYTgyMzNjN2VkMDMwYjA4YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjg3MTE0MSwiZXhwIjoxNzgyODcxNzQxfQ.uSuUTLO0uKNYOIpcXVoxpN3AXA8xxW085P12SqPCiIY
+Content-Type: application/json
+
+{
+  "user":{ "id": "6a39523da8233c7ed030b08c" }
+}
+###
+GET http://localhost:5000/api/orders/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMzk1MjNkYTgyMzNjN2VkMDMwYjA4YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjc4NTYxMSwiZXhwIjoxNzgyNzg2MjExfQ.1-5gsGLqNq45Wrer-Vu6i_7dzkvl_4HPSkHYb7K1k1c
+Content-Type: application/json
+
+###orderstatus update
+PUT http://localhost:5000/api/orders/6a447513b9f5b5b980517a76/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMzk1MjNkYTgyMzNjN2VkMDMwYjA4YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjg3MTc0NCwiZXhwIjoxNzgyODczNTQ0fQ._PATyrDbd07TOmJ4huRWkU7ilV_vHBbWPkOSAm6mwL0
+Content-Type: application/json
+
+{
+  "id":"6a447513b9f5b5b980517a76",
+  "orderStatus":"Delivered"
 }

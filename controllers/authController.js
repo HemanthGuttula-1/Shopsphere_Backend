@@ -16,7 +16,7 @@ const registerUser = async (req, res) => {
     }
 
     const salt = await bcrypt.genSalt(10);
-
+    console.log(salt)
     const hashedPassword = await bcrypt.hash(password, salt);
 
     const user = await User.create({
@@ -68,7 +68,7 @@ const loginUser = async (req, res) => {
       },
       process.env.JWT_SECRET,
       {
-        expiresIn: "10m",
+        expiresIn: "30m",
       }
     );
 

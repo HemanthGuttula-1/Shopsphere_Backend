@@ -13,9 +13,14 @@ const orderSchema = new mongoose.Schema(
         product: {
           type: mongoose.Schema.Types.ObjectId,
           ref: "Product",
+          required: true,
         },
 
-        quantity: Number,
+        quantity: {
+          type: Number,
+          required: true,
+          default: 1,
+        },
       },
     ],
 
@@ -24,14 +29,40 @@ const orderSchema = new mongoose.Schema(
       required: true,
     },
 
+    paymentMethod: {
+      type: String,
+      enum: [
+        "Razorpay",
+        "Cash On Delivery",
+      ],
+      default: "Razorpay",
+    },
+
     paymentStatus: {
       type: String,
+      enum: [
+        "Pending",
+        "Paid",
+        "Failed",
+      ],
       default: "Pending",
     },
 
     orderStatus: {
       type: String,
-      default: "Processing",
+      enum: [
+        "Pending",
+        "Processing",
+        "Shipped",
+        "Delivered",
+        "Cancelled",
+      ],
+      default: "Pending",
+    },
+
+    shippingAddress: {
+      type: String,
+      required: true,
     },
   },
   {
@@ -39,4 +70,7 @@ const orderSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Order", orderSchema);
+module.exports = mongoose.model(
+  "Order",
+  orderSchema
+);
