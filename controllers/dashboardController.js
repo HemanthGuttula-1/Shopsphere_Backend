@@ -6,29 +6,42 @@ const getDashboardStats = async (req, res) => {
   try {
     const totalUsers = await User.countDocuments();
 
-    const totalProducts =
-      await Product.countDocuments();
+    const totalProducts = await Product.countDocuments();
 
-    const totalOrders =
-      await Order.countDocuments();
+    const totalOrders = await Order.countDocuments();
 
-    const orders = await Order.find();
-
-    const totalRevenue = orders.reduce(
-      (sum, order) => sum + order.totalAmount,
-      0
-    );
+    const revenue = await Order.aggregate([
+      {
+        $match: {
+          paymentStatus: "Paid",
+        },
+      },
+      {
+        $group: {
+          _id: null,
+          totalRevenue: {
+            $sum: "$totalAmount",
+          },
+        },
+      },
+    ]);
 
     res.status(200).json({
       totalUsers,
       totalProducts,
       totalOrders,
-      totalRevenue,
+      totalRevenue:
+        revenue.length > 0
+          ? revenue[0].totalRevenue
+          : 0,
     });
+
   } catch (error) {
+
     res.status(500).json({
       message: error.message,
     });
+
   }
 };
 
