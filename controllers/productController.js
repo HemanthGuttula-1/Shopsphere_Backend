@@ -80,6 +80,37 @@ const getProducts = async (req, res) => {
     });
   }
 };
+//get related products
+const getRelatedProducts = async (req, res)=>{
+  try{
+        
+    const product = await Product.findById(req.params.id);
+    if(!product){
+      return res.status(401).json("Product not found")
+    }
+
+    const relatedProducts = await Product.find({
+      category:product.category,
+      _id:{
+        $ne:product._id
+      }
+    }).limit(4)
+
+    if(!relatedProducts){
+      return res.status(401).json("No related products")
+    }
+
+    res.status(200).json(relatedProducts)
+
+  }catch(err){
+
+    return res.status(500).json({
+      message:err.message 
+    })
+
+  }
+
+}
 
 // Get Single Product
 const getProductById = async (req, res) => {
@@ -211,6 +242,7 @@ const updateCartQuantity = async (req, res) => {
 module.exports = {
   getProducts,
   getProductById,
+  getRelatedProducts,
   createProduct,
   updateProduct,
   deleteProduct,

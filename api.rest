@@ -115,4 +115,4 @@ Content-Type: application/json
 
 
 ### 
-GET http://localhost:5000/api/products?search=iphone
+GET http://localhost:5000/api/products/related/6a41c7af1af9d6edfac4aa01

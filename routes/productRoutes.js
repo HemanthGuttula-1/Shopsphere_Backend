@@ -3,6 +3,7 @@ const express = require("express");
 const {
   getProducts,
   getProductById,
+  getRelatedProducts,
   createProduct,
   updateProduct,
   deleteProduct,
@@ -11,6 +12,8 @@ const {
 const router = express.Router();
 
 router.get("/", getProducts);
+
+router.get("/related/:id", getRelatedProducts)
 
 router.get("/:id", getProductById);
 

@@ -16,6 +16,7 @@ const getCart = async (req, res) => {
 
 const addToCart = async (req, res) => {
   try {
+
     const { productId, quantity } = req.body;
 
     let cart = await Cart.findOne({
@@ -30,8 +31,7 @@ const addToCart = async (req, res) => {
     }
 
     const existingProduct = cart.products.find(
-      (item) =>
-        item.product.toString() === productId
+      (item) => item.product.toString() === productId
     );
 
     if (existingProduct) {
@@ -97,8 +97,7 @@ const updateCartQuantity = async (req, res) => {
     }
 
     const cartItem = cart.products.find(
-      (item) =>
-        item.product.toString() === productId
+      (item) => item.product.toString() === productId
     );
 
     if (!cartItem) {
