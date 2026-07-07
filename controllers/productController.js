@@ -1,11 +1,79 @@
 const Product = require("../models/Product");
 
-// Get All Products
 const getProducts = async (req, res) => {
   try {
-    const products = await Product.find();
+    const {
+      search = "",
+      category = "",
+      minPrice,
+      maxPrice,
+      sort,
+      page = 1,
+      limit = 8,
+    } = req.query;
 
-    res.status(200).json(products);
+    const query = {};
+
+    if (search) {
+      query.name = {
+        $regex: search,
+        $options: "i",
+      };
+    }
+
+    if (category) {
+      query.category = category;
+    }
+
+    if (minPrice || maxPrice) {
+      query.price = {};
+
+      if (minPrice) {
+        query.price.$gte = Number(minPrice);
+      }
+
+      if (maxPrice) {
+        query.price.$lte = Number(maxPrice);
+      }
+    }
+
+    let sortOption = {};
+
+    switch (sort) {
+      case "priceAsc":
+        sortOption.price = 1;
+        break;
+
+      case "priceDesc":
+        sortOption.price = -1;
+        break;
+
+      case "newest":
+        sortOption.createdAt = -1;
+        break;
+
+      default:
+        sortOption.createdAt = -1;
+    }
+
+    const skip = (Number(page) - 1) * Number(limit);
+
+    const products = await Product.find(query)
+      .sort(sortOption)
+      .skip(skip)
+      .limit(Number(limit))
+      .exec();
+
+    const totalProducts = await Product.countDocuments(query);//not only total but for all the filtered total products
+    
+
+    res.status(200).json({
+      products,
+      currentPage: Number(page),
+      totalPages: Math.ceil(totalProducts / limit),
+      totalProducts,
+    });
+
   } catch (error) {
     res.status(500).json({
       message: error.message,
@@ -64,7 +132,8 @@ const updateProduct = async (req, res) => {
       req.params.id,
       req.body,
       {
-        returnDocument:"after"
+        returnDocument:"after",
+        runValidators:true,
       }
     );
 

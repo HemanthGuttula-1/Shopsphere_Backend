@@ -112,3 +112,7 @@ Content-Type: application/json
 GET http://localhost:5000/api/dashboard/stats
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMzk1MjNkYTgyMzNjN2VkMDMwYjA4YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjk1NjY0MiwiZXhwIjoxNzgyOTU4NDQyfQ.Q_503QbRV5tXsET0YzQMwooOnWJnaq7_uRvE12Ek94c
 Content-Type: application/json
+
+
+### 
+GET http://localhost:5000/api/products?search=iphone
