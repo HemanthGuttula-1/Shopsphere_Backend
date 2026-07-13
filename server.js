@@ -4,6 +4,18 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+const cloudinary = require('./config/cloudinary')
+
+cloudinary.api.ping()
+  .then((result) => {
+    console.log("Cloudinary Connected ✅");
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log("Cloudinary Connection Failed ❌");
+    console.log(error);
+  });
+
 const connectDB = require("./config/db");
 
 connectDB();

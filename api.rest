@@ -1,5 +1,5 @@
 ###creating user
-POST http://localhost:5000/api/auth/register
+POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
@@ -116,3 +116,7 @@ Content-Type: application/json
 
 ### 
 GET http://localhost:5000/api/products/related/6a41c7af1af9d6edfac4aa01
+
+###
+DELETE http://localhost:5000/api/products/6a41c7af1af9d6edfac4aa01
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMzk1MjNkYTgyMzNjN2VkMDMwYjA4YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MzgyMzM5NywiZXhwIjoxNzgzODI1MTk3fQ.dfRFCXzngHXOrnKCBjLeJi1Jbhrld-jvIoxs1TSOmRk

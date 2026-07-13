@@ -45,6 +45,8 @@ const addToCart = async (req, res) => {
 
     await cart.save();
 
+    await cart.populate("products.product");
+
     res.status(200).json(cart);
   } catch (error) {
     res.status(500).json({
@@ -74,6 +76,8 @@ const removeFromCart = async (req, res) => {
 
     await cart.save();
 
+    await cart.populate("products.product")
+    
     res.status(200).json(cart);
   } catch (error) {
     res.status(500).json({
