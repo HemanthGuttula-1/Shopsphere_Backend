@@ -1,11 +1,13 @@
 const express = require("express");
 const cors = require("cors");
-const dotenv = require("dotenv");
 
+const dotenv = require("dotenv");
 dotenv.config();
 
-const cloudinary = require('./config/cloudinary')
+const dns = require('dns')
+dns.setServers(['8.8.8.8'])
 
+const cloudinary = require('./config/cloudinary')
 cloudinary.api.ping()
   .then((result) => {
     console.log("Cloudinary Connected ✅");

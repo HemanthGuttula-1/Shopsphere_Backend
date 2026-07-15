@@ -1,0 +1,242 @@
+[
+  {
+    "name": "iPhone 16 Pro",
+    "description": "Apple flagship smartphone",
+    "category": "Mobiles",
+    "price": 129999,
+    "stock": 20,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1783655625/Verizon-iPhone-16-Pro-Max-256GB-Black-Titanium-Apple-Intelligence_dd05474c-fe54-4971-85f6-2713af29243a.d49c65d29ad3ae94fd4bfa4051055e62_wvb09n.jpg"
+  },
+  {
+    "name": "Samsung Galaxy S25 Ultra",
+    "description": "Samsung premium smartphone",
+    "category": "Mobiles",
+    "price": 124999,
+    "stock": 15,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076376/feature_6797a0b12c661_lows90.png"
+  },
+  {
+    "name": "OnePlus 13",
+    "description": "Flagship Android phone",
+    "category": "Mobiles",
+    "price": 69999,
+    "stock": 25,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076521/13-white_vyfptc.png"
+  },
+  {
+    "name": "Google Pixel 9 Pro",
+    "description": "Google AI smartphone",
+    "category": "Mobiles",
+    "price": 109999,
+    "stock": 18,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076586/s-l1200_v1calx.jpg"
+  },
+  {
+    "name": "iQOO 13",
+    "description": "Gaming flagship phone",
+    "category": "Mobiles",
+    "price": 59999,
+    "stock": 30,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076704/vivo-iqoo-13-16gb1tb_kpsdbj.jpg"
+  },
+  {
+    "name": "Vivo X200 Pro",
+    "description": "Camera focused smartphone",
+    "category": "Mobiles",
+    "price": 94999,
+    "stock": 15,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076773/90f1821ef17ad696a34a51c94065a6f0_l06sx0.png"
+  },
+  {
+    "name": "Oppo Find X8 Pro",
+    "description": "Premium Android smartphone",
+    "category": "Mobiles",
+    "price": 99999,
+    "stock": 12,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076842/images-color-konka-b-1-mo_ptbmgq.png"
+  },
+  {
+    "name": "Nothing Phone 3",
+    "description": "Transparent design smartphone",
+    "category": "Mobiles",
+    "price": 54999,
+    "stock": 20,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076906/51xHUFqPx9L_m3c0mx.jpg"
+  },
+  {
+    "name": "Realme GT 7 Pro",
+    "description": "Performance flagship",
+    "category": "Mobiles",
+    "price": 49999,
+    "stock": 22,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784076957/71w1fbZG-jL._AC_UF894_1000_QL80__hxya1p.jpg"
+  },
+  {
+    "name": "Xiaomi 15 Ultra",
+    "description": "Leica camera smartphone",
+    "category": "Mobiles",
+    "price": 119999,
+    "stock": 10,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077031/sddefault_r1kfqx.jpg"
+  },
+  {
+    "name": "MacBook Pro M4",
+    "description": "Apple professional laptop",
+    "category": "Laptops",
+    "price": 199999,
+    "stock": 10,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077086/Apple-MacBook-Pro-M4-lineup_big.jpg.large_w6hldk.jpg"
+  },
+  {
+    "name": "Dell XPS 15",
+    "description": "Premium Windows laptop",
+    "category": "Laptops",
+    "price": 169999,
+    "stock": 12,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077236/xs9500t-cnb-05000ff090-bk_wdyruc.png"
+  },
+  {
+    "name": "HP Spectre x360",
+    "description": "Convertible ultrabook",
+    "category": "Laptops",
+    "price": 149999,
+    "stock": 15,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077292/71PUZ9o9U6L_wnwouy.jpg"
+  },
+  {
+    "name": "Lenovo Legion 7",
+    "description": "Gaming laptop",
+    "category": "Laptops",
+    "price": 179999,
+    "stock": 10,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077346/08_Legion_7_Gen7_Hero_Rear-e1652145103875_xlxqtk.png"
+  },
+  {
+    "name": "ASUS ROG Strix G16",
+    "description": "Gaming powerhouse",
+    "category": "Laptops",
+    "price": 159999,
+    "stock": 8,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077404/E6D06DDC-1B87-4ADC-AD84-C72C9D7F7621_wydteu.png"
+  },
+  {
+    "name": "Acer Predator Helios",
+    "description": "Gaming performance laptop",
+    "category": "Laptops",
+    "price": 139999,
+    "stock": 9,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077460/Acer-Predator-Helios-18-RTX-4090-Core-i9-mini-led-gaming-laptop_mieelw.jpg"
+  },
+  {
+    "name": "MSI Stealth 16",
+    "description": "Portable gaming laptop",
+    "category": "Laptops",
+    "price": 189999,
+    "stock": 7,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077617/msi-stealth16-ai-ultra9-kv-laptop_p6hcht.png"
+  },
+  {
+    "name": "Samsung Galaxy Book 5",
+    "description": "Thin productivity laptop",
+    "category": "Laptops",
+    "price": 119999,
+    "stock": 20,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077677/71KM-QJKrKL_auuqx0.jpg"
+  },
+  {
+    "name": "LG Gram 16",
+    "description": "Ultra lightweight laptop",
+    "category": "Laptops",
+    "price": 129999,
+    "stock": 12,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077728/81pKId7SSYS_d3bg8d.jpg"
+  },
+  {
+    "name": "Microsoft Surface Laptop",
+    "description": "Premium Windows experience",
+    "category": "Laptops",
+    "price": 139999,
+    "stock": 10,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077772/MSFT-Surface-Laptop-6-Sneak-Curosel-Pivot-3_ipivl7.jpg"
+  },
+  {
+    "name": "Apple Watch Ultra 2",
+    "description": "Premium smartwatch",
+    "category": "Watches",
+    "price": 89999,
+    "stock": 15,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077902/6165pya85SL._AC_UF894_1000_QL80__zunwyk.jpg"
+  },
+  {
+    "name": "Samsung Galaxy Watch Ultra",
+    "description": "Android smartwatch",
+    "category": "Watches",
+    "price": 59999,
+    "stock": 18,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784077973/galaxy-watch-ultra-triathlon-quick-button-startframe-mo_rwo149.jpg"
+  },
+  {
+    "name": "Garmin Fenix 8",
+    "description": "Adventure smartwatch",
+    "category": "Watches",
+    "price": 79999,
+    "stock": 8,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784078012/fenix-8-amoled-47-slategray-cf-lg_lrk0y5.jpg"
+  },
+  {
+    "name": "OnePlus Watch 3",
+    "description": "Smart fitness watch",
+    "category": "Watches",
+    "price": 24999,
+    "stock": 25,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784078052/4bdf101f23344b5236df421921a6d672_otxwc5.png"
+  },
+  {
+    "name": "Pixel Watch 3",
+    "description": "Google smartwatch",
+    "category": "Watches",
+    "price": 39999,
+    "stock": 14,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784078199/61HCdYMr9UL._AC_UF894_1000_QL80__nf7usf.jpg"
+  },
+  {
+    "name": "Nike Air Max 270",
+    "description": "Comfortable running shoe",
+    "category": "Shoes",
+    "price": 10999,
+    "stock": 40,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784116796/AIR_MAX_270_vhqlx1.jpg"
+  },
+  {
+    "name": "Adidas Ultraboost 5",
+    "description": "Premium running shoe",
+    "category": "Shoes",
+    "price": 14999,
+    "stock": 35,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784078641/adidas-ultraboost-5-running-shoes_ndsl62.jpg"
+  },
+  {
+    "name": "Puma Deviate Nitro",
+    "description": "Performance running shoe",
+    "category": "Shoes",
+    "price": 9999,
+    "stock": 30,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784078897/Deviate-NITRO_E2_84_A2-Elite-4-Running-Shoes-Men_gryjnj.jpg"
+  },
+  {
+    "name": "New Balance 1080",
+    "description": "Cushioned running shoe",
+    "category": "Shoes",
+    "price": 13999,
+    "stock": 20,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784078945/m10802fr_nb_02_i_1200x1200_nfhemp.jpg"
+  },
+  {
+    "name": "ASICS Gel Nimbus",
+    "description": "Long distance running shoe",
+    "category": "Shoes",
+    "price": 15999,
+    "stock": 18,
+    "image": "https://res.cloudinary.com/dockjkvlw/image/upload/v1784078995/1012B753_101_SR_RT_GLB_q8dhlk.jpg"
+  }
+]
