@@ -27,6 +27,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use((req, res, next) => {
+  console.log(req.method, req.url);
+  next();
+});
+
 app.get("/", (req, res) => {
   res.status(200).send("ShopSphere API Running..");
 });
@@ -45,6 +50,7 @@ app.use("/api/payment", require("./routes/paymentRoutes"));
 
 app.use("/api/dashboard", require("./routes/dashboardRoutes"));
 
+app.use("/api/admin", require("./routes/adminRoutes"))
 
 const PORT = process.env.PORT || 5000;
 
