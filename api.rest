@@ -134,3 +134,8 @@ Content-Type:application/json
 ###
 GET http://localhost:5000/api/admin/test 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTc3NTFmOTE3ZDRlNGIyOGM3YjIwNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4NDI1NDcxNCwiZXhwIjoxNzg0MjU2NTE0fQ.XWl0GaD5lj4Ha_k3bVNZJ6r-ul6BBZOoGWsnxtqz52c
+
+
+###
+GET http://localhost:5000/api/auth/profile 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTc3NTFmOTE3ZDRlNGIyOGM3YjIwNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4NDUxMDIwMywiZXhwIjoxNzg0NTEyMDAzfQ.U5AVr_mZYx2NAIBvWXoMCfT05BeX7RKhAOAeNlJEfWA

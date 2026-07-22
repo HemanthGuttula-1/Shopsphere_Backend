@@ -6,7 +6,7 @@ const upload = require("../middleware/upload");
 const protect = require("../middleware/authMiddleware");
 const adminOnly = require("../middleware/adminMiddleware");
 
-const { addProduct } = require("../controllers/adminController");
+const { addProduct, updateProduct } = require("../controllers/adminController");
 
 router.get("/test", (req, res) => {
   res.send("Admin route is working");
@@ -19,5 +19,14 @@ router.post(
   upload.single("image"),
   addProduct
 );
+
+router.put(
+  "/products/:id",
+  protect,
+  adminOnly,
+  upload.single("image"),
+  updateProduct
+);
+
 
 module.exports = router;
