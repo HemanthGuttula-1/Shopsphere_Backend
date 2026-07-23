@@ -34,6 +34,7 @@ const orderSchema = new mongoose.Schema(
       enum: [
         "Razorpay",
         "Cash On Delivery",
+        "Test",
       ],
       default: "Razorpay",
     },
@@ -61,8 +62,30 @@ const orderSchema = new mongoose.Schema(
     },
 
     shippingAddress: {
-      type: String,
-      required: true,
+      fullName:{
+        type:String,
+        required:true,
+      },
+      address:{
+        type:String,
+        required:true,
+      },
+      phone:{
+        type:String,
+        required:true,
+      },
+      city:{
+        type:String,
+        required:true,
+      },
+      state:{
+        type:String,
+        required:true,
+      },
+      pincode:{
+        type:String,
+        required:true
+      }
     },
   },
   {
