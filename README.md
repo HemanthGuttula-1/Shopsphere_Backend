@@ -227,3 +227,52 @@ Requested API
 ## Frontend Repository
 
 frontend :[Shopsphere_Frontend](https://github.com/HemanthGuttula-1/shopsphere_frontend)
+
+## Seed Sample Products
+
+To quickly populate the database with sample products, run the seed script.
+
+### Step 1: Ensure MongoDB is Connected
+
+Make sure your `.env` file contains a valid MongoDB connection string.
+
+```env
+MONGO_URI=your_mongodb_connection_string
+```
+
+### Step 2: Run the Seed Script
+
+```bash
+node seedProducts.js
+```
+
+or, if you have an npm script:
+
+```bash
+npm run seed
+```
+
+### What the Script Does
+
+The `seedProducts.js` file will:
+
+- Connect to the MongoDB database.
+- Remove any existing products (if configured to do so).
+- Insert a predefined list of sample products.
+- Display a success message in the terminal.
+- Close the database connection automatically.
+
+### Expected Output
+
+```bash
+Connected to MongoDB
+Existing products removed
+Sample products inserted successfully
+Database connection closed
+```
+
+### Notes
+
+- Run the script only when you need to populate the database with sample data.
+- If the script deletes existing products before inserting new ones, avoid running it on a production database.
+- You can modify the sample product list in `seedProducts.js` to add or update products.
