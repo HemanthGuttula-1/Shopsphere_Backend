@@ -226,7 +226,4 @@ Requested API
 ```
 ## Frontend Repository
 
-Frontend Repository:
-```text
 frontend :[Shopsphere_Frontend](https://github.com/HemanthGuttula-1/shopsphere_frontend)
-```
