@@ -62,8 +62,8 @@ Others
 - cors
 - nodemon
 
-backend/
-
+# backend/
+```text
 ├── config/
 │   ├── db.js
 │   └── cloudinary.js
@@ -83,6 +83,7 @@ backend/
 ├── server.js
 │
 └── package.json
+```
 
 ## Installation
 
@@ -126,7 +127,7 @@ npm run dev
 ```
 
 ## Authentication
-
+```text
 POST /api/auth/register
 
 POST /api/auth/login
@@ -134,11 +135,11 @@ POST /api/auth/login
 GET /api/auth/profile
 
 PUT /api/auth/update
-
+```
 ----------------------------
 
 ## Products
-
+```text
 GET /api/products
 
 GET /api/products/:id
@@ -148,11 +149,11 @@ POST /api/products
 PUT /api/products/:id
 
 DELETE /api/products/:id
-
+```
 ----------------------------
 
 ## Cart
-
+```text
 GET /api/cart
 
 POST /api/cart/add
@@ -160,28 +161,30 @@ POST /api/cart/add
 PUT /api/cart/update
 
 DELETE /api/cart/remove
-
+```
 ----------------------------
 
 ## Wishlist
-
+```text
 GET /api/wishlist
 
 POST /api/wishlist/add
 
 DELETE /api/wishlist/remove
-
+```
 ----------------------------
 
 ## Orders
-
+```text
 POST /api/orders
 
 GET /api/orders
 
 GET /api/orders/:id
+```
 
 # Authentication Flow
+
 ```text
 User Login
       │
@@ -225,5 +228,5 @@ Requested API
 
 Frontend Repository:
 ```text
-https://github.com/HemanthGuttula-1/shopsphere_frontend
+frontend :[Shopsphere_Frontend](https://github.com/HemanthGuttula-1/shopsphere_frontend)
 ```
