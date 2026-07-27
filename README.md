@@ -182,6 +182,7 @@ GET /api/orders
 GET /api/orders/:id
 
 # Authentication Flow
+```text
 User Login
       │
       ▼
@@ -201,24 +202,25 @@ Protected Middleware
       │
       ▼
 Requested API
-
+```
 ## Models
-
+```text
 - User
 - Product
 - Cart
 - Wishlist
 - Order
+```
 
 ## Security Features
-
+```text 
 - Password Hashing using bcrypt
 - JWT Authentication
 - Protected Routes
 - Admin Authorization
 - Environment Variables
 - Input Validation
-
+```
 ## Frontend Repository
 
 Frontend Repository:
